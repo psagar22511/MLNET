@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/API/">
+    <Project Path="API/MLAPI/MLAPI.csproj" Id="c6e51022-31d4-4bc5-befc-417b75438f9f" />
+    <Project Path="ConsoleApp/ConsoleApp.csproj" Id="cd795822-79aa-401e-8e27-8b8b35dba34d" />
+    <Project Path="RegressionHousePricePredict/RegressionHousePricePredict.csproj" Id="4e380395-1dda-45d7-97ee-027ff6fbec48" />
+  </Folder>
+</Solution>
