@@ -9,17 +9,17 @@ namespace MLAPI.Controllers
     [ApiController]
     public class SpamDetectionController : ControllerBase
     {
-        private readonly SpamDetectionService _spamDetector;
-        public SpamDetectionController(SpamDetectionService spamDetector)
+        private readonly SpamDetectionService _spamDetectionService;
+        public SpamDetectionController(SpamDetectionService spamDetectionService)
         {
-            _spamDetector = spamDetector;
+            _spamDetectionService = spamDetectionService;
         }
         [HttpPost("predict")]
         public IActionResult Predict([FromBody] EmailData request)
         {
             //POST MAN = https://localhost:7278/api/SpamDetection/predict
             //Body - JSON - {"Text" : "How are you?" }
-            var result = _spamDetector.Predict(request.Text);
+            var result = _spamDetectionService.Predict(request.Text);
 
             return Ok(new
             {

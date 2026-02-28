@@ -457,11 +457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sagar-PC\\Learning\\ML\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
+      "projectUniqueName": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
       "projectName": "RegressionHousePricePredict",
-      "projectPath": "C:\\Sagar-PC\\Learning\\ML\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
+      "projectPath": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Sagar-PC\\Learning\\ML\\RegressionHousePricePredict\\obj\\",
+      "outputPath": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

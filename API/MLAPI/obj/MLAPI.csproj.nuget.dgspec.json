@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sagar-PC\\Learning\\ML\\API\\MLAPI\\MLAPI.csproj": {}
+    "C:\\Sagar-PC\\Learning\\MLNET\\API\\MLAPI\\MLAPI.csproj": {}
   },
   "projects": {
-    "C:\\Sagar-PC\\Learning\\ML\\API\\MLAPI\\MLAPI.csproj": {
+    "C:\\Sagar-PC\\Learning\\MLNET\\API\\MLAPI\\MLAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sagar-PC\\Learning\\ML\\API\\MLAPI\\MLAPI.csproj",
+        "projectUniqueName": "C:\\Sagar-PC\\Learning\\MLNET\\API\\MLAPI\\MLAPI.csproj",
         "projectName": "MLAPI",
-        "projectPath": "C:\\Sagar-PC\\Learning\\ML\\API\\MLAPI\\MLAPI.csproj",
+        "projectPath": "C:\\Sagar-PC\\Learning\\MLNET\\API\\MLAPI\\MLAPI.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Sagar-PC\\Learning\\ML\\API\\MLAPI\\obj\\",
+        "outputPath": "C:\\Sagar-PC\\Learning\\MLNET\\API\\MLAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

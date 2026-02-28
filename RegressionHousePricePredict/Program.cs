@@ -1,6 +1,4 @@
-﻿
-
-using RegressionHousePricePredict;
+﻿using RegressionHousePricePredict;
 
 class Program
 {
@@ -8,8 +6,8 @@ class Program
     {
         //Regression Classification Example
 
-        string dataPath = @"C:\Sagar-PC\Learning\ML\RegressionHousePricePredict\Housing.csv";
-        string modelPath = @"C:\Sagar-PC\Learning\ML\RegressionHousePricePredict\housePricePredict.zip";
+        string dataPath = @"C:\Sagar-PC\Learning\MLNET\RegressionHousePricePredict\Housing.csv";
+        string modelPath = @"C:\Sagar-PC\Learning\MLNET\RegressionHousePricePredict\housePricePredict.zip";
 
         var spamDetector = new HousePredictService(dataPath, modelPath);
 

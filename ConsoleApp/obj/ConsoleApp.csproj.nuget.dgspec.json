@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sagar-PC\\Learning\\ML\\ConsoleApp\\ConsoleApp.csproj": {}
+    "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Sagar-PC\\Learning\\ML\\ConsoleApp\\ConsoleApp.csproj": {
+    "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sagar-PC\\Learning\\ML\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "C:\\Sagar-PC\\Learning\\ML\\ConsoleApp\\ConsoleApp.csproj",
+        "projectPath": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Sagar-PC\\Learning\\ML\\ConsoleApp\\obj\\",
+        "outputPath": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

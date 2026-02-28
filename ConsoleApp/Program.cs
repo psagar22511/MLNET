@@ -6,8 +6,8 @@ class Program
     {
         //Binary Classification Example
 
-        string dataPath = @"C:\Sagar-PC\Learning\ML\ConsoleApp\spamdata.csv";
-        string modelPath = @"C:\Sagar-PC\Learning\ML\ConsoleApp\spamDetectionModel.zip";
+        string dataPath = @"C:\Sagar-PC\Learning\MLNET\ConsoleApp\spamdata.csv";
+        string modelPath = @"C:\Sagar-PC\Learning\MLNET\ConsoleApp\spamDetectionModel.zip";
 
         var spamDetector = new SpamDetectionService(dataPath, modelPath);
 

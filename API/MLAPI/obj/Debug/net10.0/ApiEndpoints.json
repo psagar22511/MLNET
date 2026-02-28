@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "MLAPI.Controllers.HousePricePredictController",
+    "Method": "Predict",
+    "RelativePath": "api/HousePricePredict/predict",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MLAPI.Model.HouseData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MLAPI.Controllers.SpamDetectionController",
     "Method": "Predict",
     "RelativePath": "api/SpamDetection/predict",

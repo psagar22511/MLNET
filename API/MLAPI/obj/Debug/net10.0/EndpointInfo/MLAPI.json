@@ -13,6 +13,38 @@
     }
   ],
   "paths": {
+    "/api/HousePricePredict/predict": {
+      "post": {
+        "tags": [
+          "HousePricePredict"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HouseData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HouseData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HouseData"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/SpamDetection/predict": {
       "post": {
         "tags": [
@@ -98,6 +130,43 @@
           }
         }
       },
+      "HouseData": {
+        "type": "object",
+        "properties": {
+          "size": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "float"
+          },
+          "bedrooms": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "float"
+          },
+          "age": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "float"
+          },
+          "label": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "float"
+          }
+        }
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -132,6 +201,9 @@
     }
   },
   "tags": [
+    {
+      "name": "HousePricePredict"
+    },
     {
       "name": "SpamDetection"
     },

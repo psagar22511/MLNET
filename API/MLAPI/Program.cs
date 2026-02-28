@@ -8,8 +8,11 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// Register SpamDetector as Singleton
+// Register Spam Detector Service as Singleton
 builder.Services.AddSingleton<SpamDetectionService>();
+
+// Register House Price Predict Service as Singleton
+builder.Services.AddSingleton<HousePricePredictService>();
 
 var app = builder.Build();
 
