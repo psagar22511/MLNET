@@ -9,6 +9,8 @@
 bin/
 obj/
 out/
+**/obj/
+***/obj/
 
 # User-specific files
 *.user
