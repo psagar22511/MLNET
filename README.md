@@ -7,7 +7,7 @@ Spam Detection mail body (ConsoleApp Library)
 Predict house price based on size, bedrooms and age and result is predicted price. (RegressionHousePricePredict Library)
 
 ## Tech Stack
-- .NET 9
+- .NET 10
 - ML.NET
 - ASP.NET Core Web API
 
