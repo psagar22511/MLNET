@@ -3,3 +3,60 @@
 .vs/ML.slnx/FileContentIndex/8e055f83-602a-46d7-a101-322fcaaf9b37.vsidx
 .vs/ML.slnx/FileContentIndex/8e255f33-6a01-463b-8d05-43ff8476d934.vsidx
 .vs/ML.slnx/FileContentIndex/9fa43abc-e768-4fb3-adff-b11bdce3f3e1.vsidx
+
+
+# Build artifacts
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains IDE
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.vscode/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Others
+*.cache
+*.pdb
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+
