@@ -1,10 +1,15 @@
 # ML.NET Binary Classification (ConsoleApp Library)
 # ML.NET Regression Example (RegressionHousePricePredict Library)
-# MLAPI Binary Classification Implemented and got the results)
+# ML.NET Multiclass Classification Example(NewsCategoryClassification Library)
+# ML.NET Natural Language Processing (NLP Text Processing) Example(NLPTextProcessing Library)
+# 
 
-## Problem
-Spam Detection mail body (ConsoleApp Library)
-Predict house price based on size, bedrooms and age and result is predicted price. (RegressionHousePricePredict Library)
+## Information
+=> Spam Detection mail body (ConsoleApp Library)
+=> Predict house price based on size, bedrooms and age and result is predicted price. (RegressionHousePricePredict Library)
+=> Predict news accuracy in (Micro and Macro) (NewsCategoryClassification Library)
+=> Predict (Positice OR Negative, Probability) (NLPTextProcessing Library)
+=> 
 
 ## Tech Stack
 - .NET 10
