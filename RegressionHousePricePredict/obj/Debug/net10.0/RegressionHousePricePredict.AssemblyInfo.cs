@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegressionHousePricePredict")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c03a74889c91910d34433c25ea677dd657a7faae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+726f99111fe726601d750252ed1f5ff8de3ca8df")]
 [assembly: System.Reflection.AssemblyProductAttribute("RegressionHousePricePredict")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegressionHousePricePredict")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
