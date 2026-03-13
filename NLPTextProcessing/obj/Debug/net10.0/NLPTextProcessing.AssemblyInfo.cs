@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NLPTextProcessing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+726f99111fe726601d750252ed1f5ff8de3ca8df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+596daf81605a0e5f6f52610ad6cae6697b663f6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NLPTextProcessing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NLPTextProcessing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

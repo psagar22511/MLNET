@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Sagar-PC\\Learning\\MLNET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|c:\\sagar-pc\\learning\\mlnet\\nlptextprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|solutionrelative:nlptextprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|c:\\sagar-pc\\learning\\mlnet\\recommendationexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|solutionrelative:recommendationexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42D83C73-2402-48FE-8C14-564E0186CEBD}|NewsCategoryClassification\\NewsCategoryClassification.csproj|c:\\sagar-pc\\learning\\mlnet\\newscategoryclassification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42D83C73-2402-48FE-8C14-564E0186CEBD}|NewsCategoryClassification\\NewsCategoryClassification.csproj|solutionrelative:newscategoryclassification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|c:\\sagar-pc\\learning\\mlnet\\recommendationexample\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|solutionrelative:recommendationexample\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|c:\\sagar-pc\\learning\\mlnet\\recommendationexample\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|solutionrelative:recommendationexample\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|c:\\sagar-pc\\learning\\mlnet\\nlptextprocessing\\nlptextprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|solutionrelative:nlptextprocessing\\nlptextprocessingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|c:\\sagar-pc\\learning\\mlnet\\consoleapp\\servicesforwebapi\\spamdetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|solutionrelative:consoleapp\\servicesforwebapi\\spamdetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|c:\\sagar-pc\\learning\\mlnet\\recommendationexample\\recommendationexample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9EAF53DB-5A19-4782-94AE-9CDF4D20463F}|RecommendationExample\\RecommendationExample.csproj|solutionrelative:recommendationexample\\recommendationexample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|c:\\sagar-pc\\learning\\mlnet\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|solutionrelative:consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|c:\\sagar-pc\\learning\\mlnet\\nlptextprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BA1C859-77BF-40C5-8319-864D8F257893}|NLPTextProcessing\\NLPTextProcessing.csproj|solutionrelative:nlptextprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|c:\\sagar-pc\\learning\\mlnet\\consoleapp\\servicesforwebapi\\spamdetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD795822-79AA-401E-8E27-8B8B35DBA34D}|ConsoleApp\\ConsoleApp.csproj|solutionrelative:consoleapp\\servicesforwebapi\\spamdetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\NLPTextProcessing\\Program.cs",
               "RelativeDocumentMoniker": "NLPTextProcessing\\Program.cs",
               "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\NLPTextProcessing\\Program.cs",
               "RelativeToolTip": "NLPTextProcessing\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwAcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-28T07:49:05.703Z",
               "IsPinned": true,
@@ -48,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SpamDetectionService.cs",
               "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\ServicesForWebAPI\\SpamDetectionService.cs",
               "RelativeDocumentMoniker": "ConsoleApp\\ServicesForWebAPI\\SpamDetectionService.cs",
@@ -62,13 +74,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NLPTextProcessingService.cs",
               "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\NLPTextProcessing\\NLPTextProcessingService.cs",
               "RelativeDocumentMoniker": "NLPTextProcessing\\NLPTextProcessingService.cs",
               "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\NLPTextProcessing\\NLPTextProcessingService.cs",
               "RelativeToolTip": "NLPTextProcessing\\NLPTextProcessingService.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAlwEsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-28T07:59:12.092Z",
               "IsPinned": true,
@@ -76,34 +88,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp\\Program.cs",
               "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\ConsoleApp\\Program.cs",
               "RelativeToolTip": "ConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-28T08:01:41.11Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\Program.cs",
+              "RelativeDocumentMoniker": "RecommendationExample\\Program.cs",
+              "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\Program.cs",
+              "RelativeToolTip": "RecommendationExample\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T11:48:57.632Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\Program.cs",
-              "RelativeDocumentMoniker": "NewsCategoryClassification\\Program.cs",
-              "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\Program.cs",
-              "RelativeToolTip": "NewsCategoryClassification\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Title": "RecommendationService.cs",
+              "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\RecommendationService.cs",
+              "RelativeDocumentMoniker": "RecommendationExample\\RecommendationService.cs",
+              "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\RecommendationService.cs",
+              "RelativeToolTip": "RecommendationExample\\RecommendationService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T08:04:58.103Z",
+              "WhenOpened": "2026-03-13T11:51:36.336Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecommendationExample",
+              "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\RecommendationExample.csproj",
+              "RelativeDocumentMoniker": "RecommendationExample\\RecommendationExample.csproj",
+              "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\RecommendationExample.csproj",
+              "RelativeToolTip": "RecommendationExample\\RecommendationExample.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-13T11:50:14.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRating.cs",
+              "DocumentMoniker": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\ProductRating.cs",
+              "RelativeDocumentMoniker": "RecommendationExample\\ProductRating.cs",
+              "ToolTip": "C:\\Sagar-PC\\Learning\\MLNET\\RecommendationExample\\ProductRating.cs",
+              "RelativeToolTip": "RecommendationExample\\ProductRating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T11:50:23.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
