@@ -11,8 +11,11 @@ class Program
         Multiclass algorithms
         Accuracy metrics */
 
-        string dataPath = @"C:\Sagar-PC\Learning\MLNET\NewsCategoryClassification\NewsCategory.csv";
-        string modelPath = @"C:\Sagar-PC\Learning\MLNET\NewsCategoryClassification\newsCategoryClassification.zip";
+        //string modelPath = @"C:\Sagar-PC\Learning\MLNET\RegressionHousePricePredict\housePricePredict.zip";
+        //string modelPath = @"C:\Sagar-PC\Learning\MLNET\NewsCategoryClassification\newsCategoryClassification.zip";
+
+        string dataPath = @"C:\SagarPatel\Practice\ML.NET\NewsCategoryClassification\NewsCategory.csv";
+        string modelPath = @"C:\SagarPatel\Practice\ML.NET\NewsCategoryClassification\newsCategoryClassification.zip";
 
         new NewsCategoryClassficationService(dataPath, modelPath);
     }
