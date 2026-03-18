@@ -48,24 +48,26 @@ namespace ConsoleApp.Services
             _model = pipeline.Fit(dataView);
 
             #region Model Evaluation Process
-            var split = _mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
+            //var split = _mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
+            var split = _mlContext.Data.TrainTestSplit(_mlContext.Data.ShuffleRows(dataView), testFraction: 0.2);
             var trainData = split.TrainSet; //used to train the model
             var testData = split.TestSet; //used only for evaluation
 
             var predictions = _model.Transform(testData);
             var metrics = _mlContext.BinaryClassification.Evaluate(predictions);
+            //var metrics = _mlContext.BinaryClassification.EvaluateNonCalibrated(predictions);
 
             Console.WriteLine("===== Model Evaluation Metrics =====");
             Console.WriteLine($"Accuracy: {metrics.Accuracy:P2}");
             Console.WriteLine($"AUC: {metrics.AreaUnderRocCurve:P2}");
             Console.WriteLine($"F1 Score: {metrics.F1Score:P2}");
-            Console.WriteLine($"F1 Score: {metrics.LogLoss:P2}");
-            Console.WriteLine($"F1 Score: {metrics.LogLossReduction:P2}");
-            Console.WriteLine($"F1 Score: {metrics.AreaUnderPrecisionRecallCurve:P2}");
-            Console.WriteLine($"F1 Score: {metrics.NegativePrecision:P2}");
-            Console.WriteLine($"F1 Score: {metrics.NegativeRecall:P2}");
-            Console.WriteLine($"F1 Score: {metrics.PositivePrecision:P2}");
-            Console.WriteLine($"F1 Score: {metrics.PositiveRecall:P2}");
+            Console.WriteLine($"LogLoss: {metrics.LogLoss:P2}");
+            Console.WriteLine($"LogLossReduction: {metrics.LogLossReduction:P2}");
+            Console.WriteLine($"AreaUnderPrecisionRecallCurve: {metrics.AreaUnderPrecisionRecallCurve:P2}");
+            Console.WriteLine($"NegativePrecision: {metrics.NegativePrecision:P2}");
+            Console.WriteLine($"NegativeRecall: {metrics.NegativeRecall:P2}");
+            Console.WriteLine($"PositivePrecision: {metrics.PositivePrecision:P2}");
+            Console.WriteLine($"PositiveRecall: {metrics.PositiveRecall:P2}");
             #endregion
 
             // Save model

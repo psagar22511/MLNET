@@ -54,10 +54,10 @@ namespace NewsCategoryClassification
             var metrics = _mlContext.MulticlassClassification.Evaluate(predictions);
             Console.WriteLine($"MicroAccuracy: {metrics.MicroAccuracy:P2}");
             Console.WriteLine($"MacroAccuracy: {metrics.MacroAccuracy:P2}");
-            Console.WriteLine($"MacroAccuracy: {metrics.PerClassLogLoss:P2}");
-            Console.WriteLine($"MacroAccuracy: {metrics.TopKAccuracy:P2}");
-            Console.WriteLine($"MacroAccuracy: {metrics.TopKAccuracyForAllK:P2}");
-            Console.WriteLine($"MacroAccuracy: {metrics.TopKPredictionCount:P2}");
+            Console.WriteLine($"PerClassLogLoss: {metrics.PerClassLogLoss:P2}");
+            Console.WriteLine($"TopKAccuracy: {metrics.TopKAccuracy:P2}");
+            Console.WriteLine($"TopKAccuracyForAllK: {metrics.TopKAccuracyForAllK:P2}");
+            Console.WriteLine($"TopKPredictionCount: {metrics.TopKPredictionCount:P2}");
             Console.WriteLine($"LogLoss: {metrics.LogLoss:P2}");
             #endregion
 

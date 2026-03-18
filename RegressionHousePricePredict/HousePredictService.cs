@@ -50,10 +50,10 @@ namespace RegressionHousePricePredict
             var predictions = _model.Transform(dataView);
             var metrics = _mlContext.Regression.Evaluate(predictions);
             Console.WriteLine($"R²: {metrics.RSquared:0.##}");
-            Console.WriteLine($"RMSE: {metrics.RootMeanSquaredError:0.##}");
-            Console.WriteLine($"RMSE: {metrics.MeanAbsoluteError:0.##}");
-            Console.WriteLine($"RMSE: {metrics.MeanSquaredError:0.##}");
-            Console.WriteLine($"RMSE: {metrics.LossFunction:0.##}");
+            Console.WriteLine($"RootMeanSquaredError: {metrics.RootMeanSquaredError:0.##}");
+            Console.WriteLine($"MeanAbsoluteError: {metrics.MeanAbsoluteError:0.##}");
+            Console.WriteLine($"MeanSquaredError: {metrics.MeanSquaredError:0.##}");
+            Console.WriteLine($"LossFunction: {metrics.LossFunction:0.##}");
             #endregion
 
             // Save model
