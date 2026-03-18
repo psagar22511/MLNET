@@ -451,23 +451,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\GCIT_PC07\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
+      "projectUniqueName": "C:\\SagarPatel\\Practice\\ML.NET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
       "projectName": "RegressionHousePricePredict",
-      "projectPath": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Sagar-PC\\Learning\\MLNET\\RegressionHousePricePredict\\obj\\",
+      "projectPath": "C:\\SagarPatel\\Practice\\ML.NET\\RegressionHousePricePredict\\RegressionHousePricePredict.csproj",
+      "packagesPath": "C:\\Users\\GCIT_PC07\\.nuget\\packages\\",
+      "outputPath": "C:\\SagarPatel\\Practice\\ML.NET\\RegressionHousePricePredict\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GCIT_PC07\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

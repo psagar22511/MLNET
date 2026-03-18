@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\NewsCategoryClassification.csproj": {}
+    "C:\\SagarPatel\\Practice\\ML.NET\\NewsCategoryClassification\\NewsCategoryClassification.csproj": {}
   },
   "projects": {
-    "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\NewsCategoryClassification.csproj": {
+    "C:\\SagarPatel\\Practice\\ML.NET\\NewsCategoryClassification\\NewsCategoryClassification.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\NewsCategoryClassification.csproj",
+        "projectUniqueName": "C:\\SagarPatel\\Practice\\ML.NET\\NewsCategoryClassification\\NewsCategoryClassification.csproj",
         "projectName": "NewsCategoryClassification",
-        "projectPath": "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\NewsCategoryClassification.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Sagar-PC\\Learning\\MLNET\\NewsCategoryClassification\\obj\\",
+        "projectPath": "C:\\SagarPatel\\Practice\\ML.NET\\NewsCategoryClassification\\NewsCategoryClassification.csproj",
+        "packagesPath": "C:\\Users\\GCIT_PC07\\.nuget\\packages\\",
+        "outputPath": "C:\\SagarPatel\\Practice\\ML.NET\\NewsCategoryClassification\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GCIT_PC07\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

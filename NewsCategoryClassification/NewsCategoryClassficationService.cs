@@ -49,15 +49,22 @@ namespace NewsCategoryClassification
             // Train Model
             _model = pipeline.Fit(dataView);
 
+            #region Model Evaluation Process
+            var predictions = _model.Transform(dataView);
+            var metrics = _mlContext.MulticlassClassification.Evaluate(predictions);
+            Console.WriteLine($"MicroAccuracy: {metrics.MicroAccuracy:P2}");
+            Console.WriteLine($"MacroAccuracy: {metrics.MacroAccuracy:P2}");
+            Console.WriteLine($"MacroAccuracy: {metrics.PerClassLogLoss:P2}");
+            Console.WriteLine($"MacroAccuracy: {metrics.TopKAccuracy:P2}");
+            Console.WriteLine($"MacroAccuracy: {metrics.TopKAccuracyForAllK:P2}");
+            Console.WriteLine($"MacroAccuracy: {metrics.TopKPredictionCount:P2}");
+            Console.WriteLine($"LogLoss: {metrics.LogLoss:P2}");
+            #endregion
+
             // Save model
             _mlContext.Model.Save(_model, dataView.Schema, _modelPath);
 
-            var predictions = _model.Transform(dataView);
-            var metrics = _mlContext.MulticlassClassification.Evaluate(predictions);
-
             Console.WriteLine("Model trained and saved.");
-            Console.WriteLine($"MicroAccuracy: {metrics.MicroAccuracy}");
-            Console.WriteLine($"MacroAccuracy: {metrics.MacroAccuracy}");
         }
         private void LoadModel()
         {

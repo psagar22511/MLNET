@@ -22,7 +22,7 @@ namespace RegressionHousePricePredict
                 TrainAndSaveModel(dataPath);
             }
 
-            // Create Prediction Engine
+            // Create Prediction Engine (Predict single sample)
             _predictionEngine = _mlContext.Model
                 .CreatePredictionEngine<HouseData, HousePrediction>(_model);
         }
@@ -46,6 +46,16 @@ namespace RegressionHousePricePredict
             // Train Model
             _model = pipeline.Fit(dataView);
 
+            #region Model Evaluation Process
+            var predictions = _model.Transform(dataView);
+            var metrics = _mlContext.Regression.Evaluate(predictions);
+            Console.WriteLine($"R²: {metrics.RSquared:0.##}");
+            Console.WriteLine($"RMSE: {metrics.RootMeanSquaredError:0.##}");
+            Console.WriteLine($"RMSE: {metrics.MeanAbsoluteError:0.##}");
+            Console.WriteLine($"RMSE: {metrics.MeanSquaredError:0.##}");
+            Console.WriteLine($"RMSE: {metrics.LossFunction:0.##}");
+            #endregion
+
             // Save model
             _mlContext.Model.Save(_model, dataView.Schema, _modelPath);
 
@@ -61,7 +71,9 @@ namespace RegressionHousePricePredict
         public HousePrediction Predict(float size, float bedroom, float age)
         {
             var input = new HouseData { Size = size, Bedrooms = bedroom, Age = age };
-            return _predictionEngine.Predict(input);
+            var prediction = _predictionEngine.Predict(input);
+
+            return prediction;
         }
     }
 }

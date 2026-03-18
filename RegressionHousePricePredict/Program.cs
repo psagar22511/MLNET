@@ -1,4 +1,6 @@
-﻿using RegressionHousePricePredict;
+﻿using Microsoft.ML;
+
+using RegressionHousePricePredict;
 
 class Program
 {
