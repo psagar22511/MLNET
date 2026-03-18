@@ -313,11 +313,45 @@ Exercise
 ======================================================
 STAGE 4 — FEATURE ENGINEERING (Where Real ML Skill Lives)
 
-Text Processing Deep Dive
-	Instead of default FeaturizeText():
-		Experiment with:
-			N-grams, Character grams, Stop word removal, TF-IDF
+Purpose: Convert raw data (text, numbers, categories, dates) into numerical features that ML models can use.
 
+Impact: Good features often improve model accuracy more than changing the algorithm itself.
+
+ML.NET: Provides Transforms to perform common feature engineering tasks.
+
+Common Feature Engineering Techniques in ML.NET
+	Text Processing Deep Dive
+		Instead of default FeaturizeText():
+			Experiment with:
+				N-grams, Character grams, Stop word removal, TF-IDF
+				
+	One-Hot Encoding
+		Convert categorical variables into a binary vector.
+		.Append(mlContext.Transforms.Categorical.OneHotEncoding(
+			outputColumnName: "CategoryEncoded", 
+			inputColumnName: nameof(Input.Category)));
+			
+	Normalization / Scaling
+		Ensure numeric features are on a similar scale.
+		.Append(mlContext.Transforms.NormalizeMinMax("NormalizedFeature", nameof(Input.NumericFeature)));
+		
+	Concatenating Features
+		Combine multiple features into a single feature vector.
+		.Append(mlContext.Transforms.Concatenate("Features", 
+			"Numeric1", "Numeric2", "CategoryEncoded", "TextFeatures"));
+	
+	Extracting Date/Time Features	
+		Split a datetime column into useful components.
+		.Append(mlContext.Transforms.Conversion
+			.MapValueToKey("DayOfWeek", nameof(Input.Date)))
+	
+	Custom Feature Engineering	
+		Custom Feature Engineering
+		mlContext.Transforms.CustomMapping<MyInput, MyOutput>((input, output) =>
+		{
+			output.NewFeature = input.X * input.Y;
+		}, contractName: null);
+		
 Improve spam detection accuracy by:
 	Adding char-level features
 	Removing rare words
