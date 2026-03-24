@@ -1,0 +1,22 @@
+1> Binary Classification Example = Email spam detection = ConsoleApp
+2> Multiclass Classification Example = NewsCategoryClassification
+3> Regression Classification Example = RegressionHousePricePredict = Predict house price by size, bedrooms, age
+4> Natural Language Processing = NLPTextProcessing
+5> Clustering Example = ClusteringExample = Predict ClusterId,Disctance by Age and Annual Income
+6> Recommendation Example = RecommendationExample = Product score by productId,userId
+7> Anomaly detection Example = AnomalyDetectionExample =
+	In ML.NET, Anomaly Detection identifies unusual patterns or outliers in data (fraud, sensor failure, spikes in traffic, etc.). One common algorithm is SSA (Singular Spectrum Analysis) for time-series anomaly detection.
+8> Ranking Example = RankingExample
+	In ML.NET, Ranking is used when you want to order items by relevance instead of predicting a single value.
+		Typical use cases:
+		
+		🔎 Search result ranking (Google-style)
+		🛒 Product ranking in e-commerce
+		🎬 Movie recommendation ranking
+		📄 Document relevance ranking
+
+		ML.NET uses the LightGBM Ranking algorithm.
+
+		=> NOT SUCCESSFULLY RUN.
+9> 
+	
