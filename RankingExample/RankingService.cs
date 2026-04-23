@@ -1,7 +1,4 @@
 ﻿using Microsoft.ML;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RankingExample
 {
@@ -19,7 +16,8 @@ namespace RankingExample
 
             if (File.Exists(_modelPath))
             {
-                LoadModel();
+                //LoadModel();
+                File.Delete(_modelPath);
             }
             else
             {
@@ -37,31 +35,49 @@ namespace RankingExample
             // Load Data
             var samples = new List<RankingData>()
             {
-                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.1f, GroupId =   1 },
-                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.2f, GroupId =   1 },
-                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.3f, GroupId =   1 },
-                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.5f, GroupId =   2 },
-                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.6f, GroupId =   2 },
-            };
-            var mlContext = new MLContext();
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.1f, GroupId = 1 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.2f, GroupId = 1 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.3f, GroupId = 1 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 0.4f, GroupId = 1 },
 
-            var data = mlContext.Data.LoadFromEnumerable(samples);
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.5f, GroupId = 2 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.6f, GroupId = 2 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.7f, GroupId = 2 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 0.8f, GroupId = 2 },
+
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.9f, GroupId = 3 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 1.0f, GroupId = 3 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 1.1f, GroupId = 3 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 1.2f, GroupId = 3 },
+            };
+            //var mlContext = new MLContext();
+
+            var data = _mlContext.Data.LoadFromEnumerable(samples);
 
             // Create Pipeline
             var pipeline =
-                mlContext.Transforms.Conversion.MapValueToKey(
+                _mlContext.Transforms.Conversion.MapValueToKey(
                     outputColumnName: "GroupIdKey",
-                    inputColumnName: "GroupId")
+                    inputColumnName: nameof(RankingData.GroupId))
 
-                .Append(mlContext.Transforms.Concatenate(
+                .Append(_mlContext.Transforms.Concatenate(
                     "Features",
                     nameof(RankingData.Feature1),
                     nameof(RankingData.Feature2)))
 
-                .Append(mlContext.Ranking.Trainers.LightGbm(
-                    labelColumnName: "Label",
-                    featureColumnName: "Features",
-                    rowGroupColumnName: "GroupIdKey"));
+                .Append(_mlContext.Ranking.Trainers.LightGbm(
+                    new Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer.Options
+                    {
+                        LabelColumnName = "Label",
+                        FeatureColumnName = "Features",
+                        RowGroupColumnName = "GroupIdKey",
+                        MinimumExampleCountPerGroup = 1,
+                        NumberOfLeaves = 10,
+                        MinimumExampleCountPerLeaf = 1,
+                        LearningRate = 0.1
+                    }));
+
+            Console.WriteLine(data.Schema);
 
             // Train Model
             _model = pipeline.Fit(data);
@@ -71,17 +87,19 @@ namespace RankingExample
 
             Console.WriteLine("Model trained and saved.");
         }
-        private void LoadModel()
-        {
-            using var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read);
-            _model = _mlContext.Model.Load(stream, out _);
-
-            Console.WriteLine("Model loaded from file.");
-        }
         public RankingPrediction Predict(RankingData rankingData)
         {
             var input = new RankingData { Feature1 = rankingData.Feature1, Feature2 = rankingData.Feature2, GroupId = rankingData.GroupId };
             return _predictionEngine.Predict(input);
+        }
+        public IEnumerable<RankingPrediction> PredictBatch(IEnumerable<RankingData> data)
+        {
+            var dataView = _mlContext.Data.LoadFromEnumerable(data);
+
+            var transformed = _model.Transform(dataView);
+
+            return _mlContext.Data
+                .CreateEnumerable<RankingPrediction>(transformed, reuseRowObject: false);
         }
     }
 }

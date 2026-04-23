@@ -17,6 +17,7 @@
 
 		ML.NET uses the LightGBM Ranking algorithm.
 
-		=> NOT SUCCESSFULLY RUN.
+		=> NOT SUCCESSFULLY RUN. (Because not enough data, want more GroupId Data)
+		=> NOW, SUCCESS
 9> 
 	
