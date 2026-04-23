@@ -19,10 +19,13 @@ class Program
         };
 
         var results = spamDetector.PredictBatch(testData);
+        var ranked = testData
+            .Zip(results, (data, pred) => new { data, pred.Score })
+            .OrderByDescending(x => x.Score);
 
-        foreach (var r in results)
+        foreach (var item in ranked)
         {
-            Console.WriteLine($"Score: {r.Score}");
+            Console.WriteLine($"Feature1: {item.data.Feature1}, Score: {item.Score}");
         }
     }
 }

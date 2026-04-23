@@ -16,8 +16,7 @@ namespace RankingExample
 
             if (File.Exists(_modelPath))
             {
-                //LoadModel();
-                File.Delete(_modelPath);
+                LoadModel();
             }
             else
             {
@@ -86,6 +85,13 @@ namespace RankingExample
             _mlContext.Model.Save(_model, data.Schema, _modelPath);
 
             Console.WriteLine("Model trained and saved.");
+        }
+        private void LoadModel()
+        {
+            using var stream = new FileStream(_modelPath, FileMode.Open, FileAccess.Read);
+            _model = _mlContext.Model.Load(stream, out _);
+
+            Console.WriteLine("Model loaded from file.");
         }
         public RankingPrediction Predict(RankingData rankingData)
         {
