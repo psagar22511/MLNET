@@ -553,7 +553,10 @@ Month 6:
 =========================================================
 FINAL CHALLENGE FOR YOU
 	Build a complete ML system:
+		Data preparation (cleaning, feature engineering)
+		Build pipeline (preprocessing + model)
 		Train model
+		Evaluate model
 		Save model
 		Deploy API
 		Log predictions
