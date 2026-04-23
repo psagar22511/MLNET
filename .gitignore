@@ -8,9 +8,7 @@
 # Build artifacts
 bin/
 obj/
-out/
-**/obj/
-***/obj/
+/ML.slnx/
 
 # User-specific files
 *.user
