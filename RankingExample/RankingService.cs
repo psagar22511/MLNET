@@ -81,6 +81,18 @@ namespace RankingExample
             // Train Model
             _model = pipeline.Fit(data);
 
+            // ✅ Get predictions on the SAME dataset (or test dataset)
+            var predictions = _model.Transform(data);
+
+            // ✅ Evaluate ranking metrics
+            var metrics = _mlContext.Ranking.Evaluate(
+                predictions,
+                labelColumnName: "Label",
+                rowGroupColumnName: "GroupIdKey");
+
+            Console.WriteLine($"DCG@1: {metrics.DiscountedCumulativeGains[0]}");
+            Console.WriteLine($"NDCG@1: {metrics.NormalizedDiscountedCumulativeGains[0]}");
+
             // Save model
             _mlContext.Model.Save(_model, data.Schema, _modelPath);
 
