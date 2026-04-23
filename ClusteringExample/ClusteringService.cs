@@ -1,4 +1,6 @@
-﻿using Microsoft.ML;
+﻿using System.Reflection;
+
+using Microsoft.ML;
 
 namespace ClusteringExample
 {
@@ -31,11 +33,47 @@ namespace ClusteringExample
         {
             Console.WriteLine("Training model...");
 
-            // Load Data
-            //IDataView dataView = _mlContext.Data.LoadFromTextFile<EmailData>(
-            //    dataPath,
-            //    hasHeader: true,
-            //    separatorChar: ',');
+            // Example-1
+            var data2 = new List<ClusterItemData2>
+            {
+                new ClusterItemData2 { Size = 2, Weight = 1, Hardness = 1,  FruitName="Apple" }, // Apple
+                new ClusterItemData2 { Size = 3, Weight = 1, Hardness = 1,  FruitName="Banana" }, // Banana
+                new ClusterItemData2 { Size = 4, Weight = 3, Hardness = 3,  FruitName="Toy Car" }, // Toy Car
+                new ClusterItemData2 { Size = 3, Weight = 2, Hardness = 2,  FruitName="Ball" }  // Ball
+            };
+            var trainingData2 = _mlContext.Data.LoadFromEnumerable(data2);
+            var pipeline2 = _mlContext.Transforms
+                        .Concatenate("Features", nameof(ClusterItemData2.Size),
+                                                  nameof(ClusterItemData2.Weight),
+                                                  nameof(ClusterItemData2.Hardness))
+                        .Append(_mlContext.Clustering.Trainers.KMeans(
+                                featureColumnName: "Features",
+                                numberOfClusters: 2));
+            var model2 = pipeline2.Fit(trainingData2);
+            var predictor2 = _mlContext.Model.CreatePredictionEngine<ClusterItemData2, ClusterPrediction2>(model2);
+            foreach (var item in data2)
+            {
+                var prediction3 = predictor2.Predict(item);
+
+                Console.WriteLine($"Fruit: {item.FruitName}");
+                Console.WriteLine($"Cluster ID: {prediction3.ClusterId}");
+
+                for (int i = 0; i < prediction3?.Distances?.Length; i++)
+                {
+                    Console.WriteLine($"Distance to Cluster {i}: {prediction3.Distances[i]:0.00}");
+                }
+
+                Console.WriteLine("------------------------");
+            }
+
+            var testItem = new ClusterItemData2 { Size = 2.5f, Weight = 1f, Hardness = 1f, FruitName = "Mango" };
+
+            var prediction = predictor2.Predict(testItem);
+
+            Console.WriteLine($"Cluster: {prediction.ClusterId}");
+                        
+
+            //Example-2
             var samples = new List<CustomerData>
             {
                 new CustomerData{ Age = 25, AnnualIncome = 50000 },
