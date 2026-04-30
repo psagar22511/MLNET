@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/API/">
     <File Path="Models.txt" />
+    <Project Path="AiChatbot/AiChatbot.csproj" Id="2f369b86-63b4-4c3d-b443-a66bdf245f3c" />
     <Project Path="AnomalyDetectionExample/AnomalyDetectionExample.csproj" Id="1a4f51f5-9ac3-40b1-850f-90a47256bcb1" />
     <Project Path="API/MLAPI/MLAPI.csproj" Id="c6e51022-31d4-4bc5-befc-417b75438f9f" />
     <Project Path="ClusteringExample/ClusteringExample.csproj" />

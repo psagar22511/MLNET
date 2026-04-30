@@ -74,11 +74,20 @@
 		👉 Put similar items into groups
 
 6> Recommendation Example = RecommendationExample = Product score by productId,userId
+	It refers to building a recommendation system—a model that suggests items (like movies, products, or songs) to users based on their preferences and past behavior.
+
+	ML.NET provides this through Matrix Factorization, which is ideal for scenarios like:
+		- Movie recommendations (user → movie ratings)
+		- Product recommendations (user → purchases)
+		- Content recommendations (user → clicks/views)
+
+	You train a model to predict:
+		- “What rating would User X give Movie Y?”
 
 7> Anomaly detection Example = AnomalyDetectionExample =
 	In ML.NET, Anomaly Detection identifies unusual patterns or outliers in data (fraud, sensor failure, spikes in traffic, etc.). One common algorithm is SSA (Singular Spectrum Analysis) for time-series anomaly detection.
 
-8> Ranking Example = RankingExample
+8>	 = RankingExample
 	In ML.NET, Ranking is used when you want to order items by relevance instead of predicting a single value.
 		Typical use cases:
 		
@@ -96,5 +105,8 @@
 		✔ Feature vector creation
 		✔ Group-based learning
 		✔ LightGBM configuration
-9> 
+
+9> AiChatbot => API Project
+	- For use free model, Installed "Ollama" (Download from "https://ollama.com/download/windows")
+	- 
 	
