@@ -1,15 +1,121 @@
-# ML.NET Binary Classification (ConsoleApp Library)
-# ML.NET Regression Example (RegressionHousePricePredict Library)
-# ML.NET Multiclass Classification Example(NewsCategoryClassification Library)
-# ML.NET Natural Language Processing (NLP Text Processing) Example(NLPTextProcessing Library)
-# 
-
 ## Information
 => Spam Detection mail body (ConsoleApp Library)
 => Predict house price based on size, bedrooms and age and result is predicted price. (RegressionHousePricePredict Library)
 => Predict news accuracy in (Micro and Macro) (NewsCategoryClassification Library)
 => Predict (Positice OR Negative, Probability) (NLPTextProcessing Library)
 => 
+
+1> Binary Classification Example = Email spam detection = ConsoleApp
+	- Binary classification is a type of machine learning where a model decides between only two possible outcomes.
+	- It answers a Yes/No or A/B type question.
+	- “Only 2 choices” = IMP
+
+	Example:
+		Spam / Not Spam 📧 (A model looks at an email and decides)
+		Fraud / Not Fraud 💳 (A model looks at bank transaction and decides)
+		Pass / Fail 🎓 (1oth result)
+		Positive 👍/ Negative 👎 review 😊😡 (Product review)
+		ON 💡/ OFF (Think of a light switch)
+
+	Only two choices, so this is binary classification.
+
+2> Multiclass Classification Example = NewsCategoryClassification
+	- Multiclass classification is a type of machine learning where a model learns to choose one label out of many possible labels.
+	- “More than 2 categories” = IMP
+
+	Examples:
+		News category → Sports 🏏 / Politics 🏛️ / Technology 💻 / Entertainment 🎬 / Business 📰
+		Fruit type → Apple / Banana / Mango 🍎🍌🥭
+		Animal type → Cat / Dog / Horse 🐶🐱🐴
+
+3> Regression Classification Example = RegressionHousePricePredict = Predict house price by size, bedrooms, age
+	- Regression means the model predicts a continuous value (a number).
+	- “Predict a number” = IMP
+
+	Simple meaning:
+		👉 “How much?” or “How many?”
+
+	Examples:
+		House price → ₹75,00,000 🏠
+		Temperature → 36.5°C 🌡️
+		Salary → ₹8.2 LPA 💼
+		Sales prediction → 12,500 units 📊
+
+	- The output is a number, not a category.
+
+4> Natural Language Processing = NLPTextProcessing
+	Natural Language Processing (NLP) in ML.NET means teaching a computer to understand and work with human language (like English text) using C#.
+	- NLP is chosen based on what you want from text, not the algorithm type.
+
+	😊 Feelings → Sentiment Analysis (“How does it feel?”)
+	🏷️ Category → Text Classification (“What type is it?”)
+	🚫 Yes/No → Binary NLP (“Is it spam or not?”)
+	🔢 Number → Regression NLP (“How much?”)
+	⚙️ Just preparing text → Featurization (“Convert text for ML”)
+
+	- Understand text (like reviews, messages, emails)
+	- Decide if something is positive or negative
+	- Sort text into categories (spam / not spam, complaint / feedback)
+	- Turn words into numbers so a machine learning model can learn from them
+
+5> Clustering Example = ClusteringExample = Predict ClusterId,Disctance by Age and Annual Income
+	- 👉 Clustering in ML.NET is a technique that automatically groups similar data together without using predefined labels.
+	- It finds patterns on its own
+
+	- ML.NET uses K-Means algorithm.
+
+	Where clustering is used
+		Customer segmentation 🧑‍🤝‍🧑
+		Product grouping 🛍️
+		Document grouping 📄
+		Fraud pattern detection 💳
+		Recommendation systems 🎯
+
+	Imagine you have a box full of mixed items:
+		Apples 🍎
+		Bananas 🍌
+		Cars 🚗 toys
+		Balls ⚽
+	You don’t label them.
+	Clustering will:
+		👉 Put similar items into groups
+
+6> Recommendation Example = RecommendationExample = Product score by productId,userId
+	It refers to building a recommendation system—a model that suggests items (like movies, products, or songs) to users based on their preferences and past behavior.
+
+	ML.NET provides this through Matrix Factorization, which is ideal for scenarios like:
+		- Movie recommendations (user → movie ratings)
+		- Product recommendations (user → purchases)
+		- Content recommendations (user → clicks/views)
+
+	You train a model to predict:
+		- “What rating would User X give Movie Y?”
+
+7> Anomaly detection Example = AnomalyDetectionExample =
+	In ML.NET, Anomaly Detection identifies unusual patterns or outliers in data (fraud, sensor failure, spikes in traffic, etc.). One common algorithm is SSA (Singular Spectrum Analysis) for time-series anomaly detection.
+
+8>	 = RankingExample
+	In ML.NET, Ranking is used when you want to order items by relevance instead of predicting a single value.
+		Typical use cases:
+		
+		🔎 Search result ranking (Google-style)
+		🛒 Product ranking in e-commerce
+		🎬 Movie recommendation ranking
+		📄 Document relevance ranking
+
+		ML.NET uses the LightGBM Ranking algorithm.
+
+		=> NOT SUCCESSFULLY RUN. (Because not enough data, want more GroupId Data)
+		=> NOW, SUCCESS
+
+		Learnt
+		✔ Feature vector creation
+		✔ Group-based learning
+		✔ LightGBM configuration
+
+9> AiChatbot => API Project
+	- For use free model, Installed "Ollama" (Download from "https://ollama.com/download/windows")
+	- 
 
 ## Tech Stack
 - .NET 10
