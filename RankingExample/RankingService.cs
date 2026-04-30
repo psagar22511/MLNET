@@ -1,7 +1,4 @@
 ﻿using Microsoft.ML;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RankingExample
 {
@@ -37,34 +34,64 @@ namespace RankingExample
             // Load Data
             var samples = new List<RankingData>()
             {
-                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.1f, GroupId =   1 },
-                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.2f, GroupId =   1 },
-                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.3f, GroupId =   1 },
-                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.5f, GroupId =   2 },
-                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.6f, GroupId =   2 },
-            };
-            var mlContext = new MLContext();
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.1f, GroupId = 1 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.2f, GroupId = 1 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.3f, GroupId = 1 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 0.4f, GroupId = 1 },
 
-            var data = mlContext.Data.LoadFromEnumerable(samples);
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.5f, GroupId = 2 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 0.6f, GroupId = 2 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 0.7f, GroupId = 2 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 0.8f, GroupId = 2 },
+
+                new RankingData { Label = 3, Feature1 = 1, Feature2 = 0.9f, GroupId = 3 },
+                new RankingData { Label = 2, Feature1 = 2, Feature2 = 1.0f, GroupId = 3 },
+                new RankingData { Label = 1, Feature1 = 3, Feature2 = 1.1f, GroupId = 3 },
+                new RankingData { Label = 0, Feature1 = 4, Feature2 = 1.2f, GroupId = 3 },
+            };
+            //var mlContext = new MLContext();
+
+            var data = _mlContext.Data.LoadFromEnumerable(samples);
 
             // Create Pipeline
             var pipeline =
-                mlContext.Transforms.Conversion.MapValueToKey(
+                _mlContext.Transforms.Conversion.MapValueToKey(
                     outputColumnName: "GroupIdKey",
-                    inputColumnName: "GroupId")
+                    inputColumnName: nameof(RankingData.GroupId))
 
-                .Append(mlContext.Transforms.Concatenate(
+                .Append(_mlContext.Transforms.Concatenate(
                     "Features",
                     nameof(RankingData.Feature1),
                     nameof(RankingData.Feature2)))
 
-                .Append(mlContext.Ranking.Trainers.LightGbm(
-                    labelColumnName: "Label",
-                    featureColumnName: "Features",
-                    rowGroupColumnName: "GroupIdKey"));
+                .Append(_mlContext.Ranking.Trainers.LightGbm(
+                    new Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer.Options
+                    {
+                        LabelColumnName = "Label",
+                        FeatureColumnName = "Features",
+                        RowGroupColumnName = "GroupIdKey",
+                        MinimumExampleCountPerGroup = 1,
+                        NumberOfLeaves = 10,
+                        MinimumExampleCountPerLeaf = 1,
+                        LearningRate = 0.1
+                    }));
+
+            Console.WriteLine(data.Schema);
 
             // Train Model
             _model = pipeline.Fit(data);
+
+            // ✅ Get predictions on the SAME dataset (or test dataset)
+            var predictions = _model.Transform(data);
+
+            // ✅ Evaluate ranking metrics
+            var metrics = _mlContext.Ranking.Evaluate(
+                predictions,
+                labelColumnName: "Label",
+                rowGroupColumnName: "GroupIdKey");
+
+            Console.WriteLine($"DCG@1: {metrics.DiscountedCumulativeGains[0]}");
+            Console.WriteLine($"NDCG@1: {metrics.NormalizedDiscountedCumulativeGains[0]}");
 
             // Save model
             _mlContext.Model.Save(_model, data.Schema, _modelPath);
@@ -82,6 +109,15 @@ namespace RankingExample
         {
             var input = new RankingData { Feature1 = rankingData.Feature1, Feature2 = rankingData.Feature2, GroupId = rankingData.GroupId };
             return _predictionEngine.Predict(input);
+        }
+        public IEnumerable<RankingPrediction> PredictBatch(IEnumerable<RankingData> data)
+        {
+            var dataView = _mlContext.Data.LoadFromEnumerable(data);
+
+            var transformed = _model.Transform(dataView);
+
+            return _mlContext.Data
+                .CreateEnumerable<RankingPrediction>(transformed, reuseRowObject: false);
         }
     }
 }

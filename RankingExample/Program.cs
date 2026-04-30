@@ -5,19 +5,27 @@ class Program
     static void Main(string[] args)
     {
         //Ranking Example
-
-        string dataPath = @"C:\Sagar-PC\Learning\MLNET\RankingExample\spamdata.csv";
-        string modelPath = @"C:\Sagar-PC\Learning\MLNET\RankingExample\rankingModel.zip";
+        string dataPath = @"C:\SagarPatel\Practice\ML.NET\RankingExample\spamdata.csv";
+        string modelPath = @"C:\SagarPatel\Practice\ML.NET\RankingExample\rankingModel.zip";
 
         var spamDetector = new RankingService(dataPath, modelPath);
 
-        var result = spamDetector.Predict(new RankingData
+        var testData = new List<RankingData>
         {
-            Feature1 = 2,
-            Feature2 = 0.15f,
-            GroupId = 1
-        });
+            new RankingData { Feature1 = 2, Feature2 = 0.15f, GroupId = 1 },
+            new RankingData { Feature1 = 3, Feature2 = 0.25f, GroupId = 2 },
+            new RankingData { Feature1 = 1, Feature2 = 0.05f, GroupId = 3 },
+            new RankingData { Feature1 = 4, Feature2 = 0.45f, GroupId = 4 },
+        };
 
-        Console.WriteLine($"Ranking Score: {result.Score}");
+        var results = spamDetector.PredictBatch(testData);
+        var ranked = testData
+            .Zip(results, (data, pred) => new { data, pred.Score })
+            .OrderByDescending(x => x.Score);
+
+        foreach (var item in ranked)
+        {
+            Console.WriteLine($"Feature1: {item.data.Feature1}, Score: {item.Score}");
+        }
     }
 }

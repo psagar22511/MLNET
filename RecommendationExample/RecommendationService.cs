@@ -64,8 +64,14 @@ namespace RecommendationExample
                 ApproximationRank = 100
             };
 
-            // Create Pipeline
-            var pipeline = _mlContext.Recommendation().Trainers.MatrixFactorization(options);
+            // Create Pipeline (BOTH BELOW STTEMENT WORKS)
+            //var pipeline = _mlContext.Recommendation().Trainers.MatrixFactorization(options);
+            var pipeline = _mlContext.Recommendation().Trainers.MatrixFactorization(
+                        labelColumnName: nameof(ProductRating.Label),
+                        matrixColumnIndexColumnName: nameof(ProductRating.userId),
+                        matrixRowIndexColumnName: nameof(ProductRating.productId),
+                        numberOfIterations: 20,
+                        approximationRank: 100);
 
             // Train model
             _model = pipeline.Fit(dataView);
