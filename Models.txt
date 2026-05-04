@@ -107,6 +107,9 @@
 		✔ LightGBM configuration
 
 9> AiChatbot => API Project
+	- "Ollama" built in installed, provide result which it has, No real time talk (Like, fetch todays news paper, todays EG - IND cricket score etc...)
 	- For use free model, Installed "Ollama" (Download from "https://ollama.com/download/windows")
+	- For use UI (https://localhost:7103/index.html)
+	- For use direct API for UI (https://localhost:7103/chat, Request Body - { "message": "Hello AI!" })
 	- 
 	
