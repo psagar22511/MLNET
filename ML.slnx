@@ -6,6 +6,7 @@
     <Project Path="API/MLAPI/MLAPI.csproj" Id="c6e51022-31d4-4bc5-befc-417b75438f9f" />
     <Project Path="ClusteringExample/ClusteringExample.csproj" />
     <Project Path="ConsoleApp/ConsoleApp.csproj" Id="cd795822-79aa-401e-8e27-8b8b35dba34d" />
+    <Project Path="JobFinderML/JobFinderML.csproj" Id="a513ad1a-f80d-45b2-b1e7-8f068cc19eea" />
     <Project Path="NewsCategoryClassification/NewsCategoryClassification.csproj" Id="42d83c73-2402-48fe-8c14-564e0186cebd" />
     <Project Path="NLPTextProcessing/NLPTextProcessing.csproj" Id="3ba1c859-77bf-40c5-8319-864d8f257893" />
     <Project Path="RankingExample/RankingExample.csproj" Id="7fd8862a-4f0a-4b0a-a0b9-2ef1e979b131" />
