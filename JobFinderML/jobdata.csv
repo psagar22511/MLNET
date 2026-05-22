@@ -1,0 +1,4 @@
+Title,Description,Skills,IsRelevant
+.NET Developer,ASP.NET Core C# APIs,C# ASP.NET SQL,true
+Java Developer,Spring Boot APIs,Java Spring,false
+Full Stack Developer,.NET React Azure,C# React Azure,true
