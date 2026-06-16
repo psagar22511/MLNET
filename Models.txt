@@ -113,3 +113,10 @@
 	- For use direct API for UI (https://localhost:7103/chat, Request Body - { "message": "Hello AI!" })
 	- 
 	
+	
+=> Other offline LLM like, Ollama (Ollama supports a large registry of open-source models, including Llama 3, Mistral, Phi, Qwen, and specialized coding or multimodal models.)
+-> GPT4All (Best for Beginners & Clean GUI)
+-> LM Studio (Best for Offline Document Search / RAG)
+-> Llama.cpp (The Underlying Powerhouse)
+-> Automatic1111 of LLMs Text-Generation-WebUI (Best for Advanced Users) 
+-> Llamafile (Best for Portability)
