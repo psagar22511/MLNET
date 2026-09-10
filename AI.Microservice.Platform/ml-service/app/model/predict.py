@@ -15,6 +15,8 @@ data_path = r"C:\SagarPatel\Practice\ML.NET\AI.Microservice.Platform\ml-service\
 if not os.path.exists(model_path):
     print("⚠️ Model missing. Triggering train.py function...")
     build_and_save_model(data_path, model_path)
+else:
+    print("✅ Model found. Loading the model...")
 
 model = joblib.load(model_path)
 

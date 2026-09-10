@@ -13,8 +13,19 @@ namespace dotnet_api.Service
 
         public async Task<string> GetPrediction(PredictionRequest request)
         {
-            var response = await _httpClient.PostAsJsonAsync("http://127.0.0.1:8000/docs#/default/get_prediction_predict_post", request);
-            return await response.Content.ReadAsStringAsync();
+            var response = await _httpClient.PostAsJsonAsync(
+                "http://127.0.0.1:8000/predict",
+                request);
+
+            var result = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException(
+                    $"FastAPI returned {(int)response.StatusCode}: {result}");
+            }
+
+            return result;
         }
     }
 }

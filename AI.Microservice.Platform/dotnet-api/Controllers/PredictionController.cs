@@ -17,10 +17,11 @@ namespace dotnet_api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Predict(PredictionRequest request)
+        public async Task<IActionResult> Prediction([FromBody] PredictionRequest request)
         {
             var result = await _mlService.GetPrediction(request);
-            return Ok(result);
+            //return Ok(result);
+            return Content(result, "application/json");
         }
     }
 }
