@@ -4,6 +4,7 @@ tain.py - train the model. If model not exists, it will create a new model. If m
 We add the FastAPI.
 We host swagger on the "http://127.0.0.1:8000/predict" = Mention in the main.py
 We easily use this API in the .NET Core API to get data.
+=> http://127.0.0.1:8000/docs#/ => Open swagger UI of Python FAST API.
 
 => For train the model. train.py
 
