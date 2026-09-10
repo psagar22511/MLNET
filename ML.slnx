@@ -1,4 +1,10 @@
 <Solution>
+  <Folder Name="/AI.Microservice.Platform/">
+    <Project Path="AI.Microservice.Platform/dotnet-api/dotnet-api.csproj" Id="1582bef0-2f45-4894-b87d-1700d86a8ced" />
+    <Project Path="AI.Microservice.Platform/ml-service/ml-service.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="5a4fa592-d3ee-4399-a815-fcd46c7ef1c3">
+      <Build Project="false" />
+    </Project>
+  </Folder>
   <Folder Name="/API/">
     <File Path="Models.txt" />
     <Project Path="AiChatbot/AiChatbot.csproj" Id="2f369b86-63b4-4c3d-b443-a66bdf245f3c" />
